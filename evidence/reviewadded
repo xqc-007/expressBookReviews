@@ -1,0 +1,9 @@
+$ curl -sS --fail-with-body -X PUT http://127.0.0.1:5000/customer/auth/review/1 -b /tmp/bookstore-cookies.txt -H 'Content-Type: application/json' -d '{"review":"A compelling story with memorable characters."}'
+{"message":"Review added successfully.","reviews":{"kyrin_demo":"A compelling story with memorable characters."}}
+
+$ curl -sS --fail-with-body -X PUT http://127.0.0.1:5000/customer/auth/review/1 -b /tmp/bookstore-cookies.txt -H 'Content-Type: application/json' -d '{"review":"A powerful novel exploring tradition and change."}'
+{"message":"Review updated successfully.","reviews":{"kyrin_demo":"A powerful novel exploring tradition and change."}}
+
+$ curl -sS --fail-with-body http://127.0.0.1:5000/review/1
+{"kyrin_demo":"A powerful novel exploring tradition and change."}
+

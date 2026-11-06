@@ -1,0 +1,6 @@
+$ curl -sS --fail-with-body -X DELETE http://127.0.0.1:5000/customer/auth/review/1 -b /tmp/bookstore-cookies.txt
+{"message":"Review deleted successfully.","reviews":{}}
+
+$ curl -sS --fail-with-body http://127.0.0.1:5000/review/1
+{}
+
